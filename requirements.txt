@@ -1,0 +1,10 @@
+six
+sabyenc3
+cheetah3
+cryptography
+feedparser
+configobj
+cherrypy
+portend
+chardet
+gntp
