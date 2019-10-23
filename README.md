@@ -12,7 +12,7 @@ SABnzbd development-releases are now requiring **Python 3**, so I updated the co
 
 Versions in the latest image
 -----
-- [SABnzbd](https://sabnzbd.org "SABnzbd Project Homepage") Version: latest master on github
+- [SABnzbd](https://sabnzbd.org "SABnzbd Project Homepage") Version: latest master on GitHub
 - PAR2 from [par2cmdline](https://github.com/Parchive/par2cmdline) Version: 0.8.0
 
 Start your container
