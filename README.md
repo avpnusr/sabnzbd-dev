@@ -8,7 +8,8 @@ Supported architectures are amd64, arm64, arm.
 
 The container is lightweight and based on alpine Linux.   
 
-SABnzbd development-releases are now requiring **Python 3**, so I updated the container.
+SABnzbd development-releases are now requiring **Python 3**, so I updated the container.   
+Last build is from: 24/10/2019
 
 Versions in the latest image
 -----
@@ -26,7 +27,6 @@ docker run -d \
   -v [/config/location]:/config \
   -v [/complete/folder]:/complete \
   -v [/incomplete/folder]:/incomplete \
-  -e UID=[Users UID] \
-  -e GID=[Users GID] \
   -p 8080:8080 \
+  --user=[UID:GID] \
   --restart=unless-stopped avpnusr/sabnzbd-dev
