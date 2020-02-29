@@ -9,7 +9,7 @@ Supported architectures are amd64, arm64, arm.
 The container is lightweight and based on alpine Linux.   
 
 SABnzbd development-releases are now requiring **Python 3**, so I updated the container.   
-Last build is from: **22/02/2020**
+Last build is from: **29/02/2020**
 
 Versions in the latest image
 -----
