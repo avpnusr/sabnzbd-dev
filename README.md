@@ -14,7 +14,7 @@ Last build is from: **09/04/2020**
 Versions in the latest image
 -----
 - [SABnzbd](https://sabnzbd.org "SABnzbd Project Homepage") Version: latest master on GitHub
-- PAR2 from [par2cmdline](https://github.com/Parchive/par2cmdline) Version: 0.8.0
+- PAR2 from [par2cmdline](https://github.com/Parchive/par2cmdline) Version: 0.8.1
 
 Start your container
 -----

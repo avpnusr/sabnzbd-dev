@@ -1,6 +1,6 @@
 FROM alpine:latest
 MAINTAINER avpnusr
-ARG PAR2TAG=v0.8.0
+ARG PAR2TAG=v0.8.1
 
 COPY ./requirements.txt /
 
