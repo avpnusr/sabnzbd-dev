@@ -1,4 +1,4 @@
 #!/bin/bash
 DATUM=$(date +%d-%m-%Y)
-docker tag index.docker.io/avpnusr/sabnzbd-dev:amd64-latest index.docker.io/avpnusr/sabnzbd-dev:$DATUM-amd64-latest
-docker push index.docker.io/avpnusr/sabnzbd-dev:$DATUM-amd64-latest
+docker tag $IMAGE_NAME $DOCKER_REPO:$DATUM-amd64-latest
+docker push $DOCKER_REPO:$DATUM-amd64-latest
