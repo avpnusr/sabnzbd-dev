@@ -1,0 +1,4 @@
+#!/bin/bash
+DATUM=$(date +%d-%m-%Y)
+docker tag avpnusr/sabnzbd-dev avpnusr/sabnzbd-dev:$DATUM-amd64-latest
+docker push avpnusr/sabnzbd-dev:$DATUM-amd64-latest
