@@ -1,4 +1,0 @@
-#!/bin/bash
-DATUM=$(date +%d-%m-%Y)
-docker tag $IMAGE_NAME $DOCKER_REPO:$DATUM-amd64-latest
-docker push $DOCKER_REPO:$DATUM-amd64-latest
