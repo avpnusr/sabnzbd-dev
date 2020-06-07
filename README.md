@@ -12,6 +12,10 @@ SABnzbd development-releases are now requiring **Python 3**, so I updated the co
 
 Last build is from: **06/06/2020**
 
+Status from last build:
+-----
+![SABnzbd-Dev Docker Build](https://github.com/avpnusr/sabnzbd-dev/workflows/SABnzbd-Dev%20Docker%20Build/badge.svg)
+
 Versions in the latest image
 -----
 - [SABnzbd](https://sabnzbd.org "SABnzbd Project Homepage") Version: latest master on GitHub

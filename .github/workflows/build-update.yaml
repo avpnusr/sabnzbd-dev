@@ -1,4 +1,4 @@
-name: Build SABnzbd-DEV
+name: SABnzbd-Dev Docker Build
 
 on:
   push:
