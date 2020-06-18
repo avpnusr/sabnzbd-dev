@@ -2,8 +2,6 @@ FROM alpine:latest
 MAINTAINER avpnusr
 ARG PAR2TAG=v0.8.1
 
-COPY ./requirements.txt /
-
 RUN buildDeps="gcc g++ git mercurial make automake autoconf python3-dev openssl-dev libffi-dev musl-dev" \
   && apk --update --no-cache add $buildDeps \
   && apk --no-cache add \
@@ -17,7 +15,8 @@ RUN buildDeps="gcc g++ git mercurial make automake autoconf python3-dev openssl-
     p7zip \
     libgomp \
 && python3 -m pip install --upgrade pip --no-cache-dir \
-&& pip install -r /requirements.txt --upgrade --no-cache-dir \
+&& git clone https://github.com/sabnzbd/sabnzbd.git \
+&& python3 -m pip install -r /sabnzbd/requirements.txt --upgrade --no-cache-dir \
 && git clone --depth 1 --branch ${PAR2TAG} https://github.com/Parchive/par2cmdline.git \
 && cd /par2cmdline \
 && sh automake.sh \
@@ -26,9 +25,12 @@ RUN buildDeps="gcc g++ git mercurial make automake autoconf python3-dev openssl-
 && make install \
 && cd / \
 && rm -rf par2cmdline \
-&& git clone https://github.com/sabnzbd/sabnzbd.git \
 && cd /sabnzbd \
 && python3 tools/make_mo.py \
+# Changing default constants for matching complete / incomplete volume in this container, if you start from default config
+# Thx @ ToCa
+&& sed -i "/DEF_COMPLETE_DIR/c\DEF_COMPLETE_DIR = os.path.normpath(\"/complete\")" /sabnzbd/sabnzbd/constants.py \
+&& sed -i "/DEF_DOWNLOAD_DIR/c\DEF_DOWNLOAD_DIR = os.path.normpath(\"/incomplete\")" /sabnzbd/sabnzbd/constants.py \
 && cd / \
 && rm -rf /yenc \
 && apk del $buildDeps \
