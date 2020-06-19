@@ -42,8 +42,8 @@ RUN buildDeps="gcc g++ git mercurial make automake autoconf python3-dev openssl-
     /tmp/* \
 && addgroup -S sabnzbd \
 && adduser -S sabnzbd -G sabnzbd \
-&& mkdir /config /complete /incomplete \
-&& chown sabnzbd:sabnzbd /config /complete /incomplete
+&& mkdir /config /complete /incomplete /NZBs \
+&& chown sabnzbd:sabnzbd /config /complete /incomplete /NZBs
 
 USER sabnzbd
 
