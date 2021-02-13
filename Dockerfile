@@ -16,7 +16,8 @@ RUN buildDeps="gcc g++ git mercurial make automake autoconf python3-dev openssl-
     libgomp \
 && python3 -m pip install --upgrade pip --no-cache-dir \
 && git clone https://github.com/sabnzbd/sabnzbd.git \
-&& python3 -m pip install -r /sabnzbd/requirements.txt --upgrade --no-cache-dir \
+&& cat /sabnzbd/requirements.txt | grep -v cryptography > /sabnzbd/requirements_nocrypto.txt \
+&& python3 -m pip install -r /sabnzbd/requirements_nocrypto.txt --upgrade --no-cache-dir \
 && git clone --depth 1 --branch ${PAR2TAG} https://github.com/Parchive/par2cmdline.git \
 && cd /par2cmdline \
 && sh automake.sh \
