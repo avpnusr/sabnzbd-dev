@@ -2,11 +2,11 @@ FROM alpine:latest
 LABEL maintainer="avpnusr"
 ARG PAR2TAG=v0.8.1
 
-RUN buildDeps="gcc g++ git mercurial make automake autoconf python3-dev openssl-dev libffi-dev musl-dev rust cargo" \
+RUN buildDeps="gcc g++ git mercurial make automake autoconf python3-dev openssl-dev libffi-dev musl-dev" \
   && apk --update --no-cache add $buildDeps \
   && apk --no-cache add \
     python3 \
-    py3-pip py3-openssl \
+    py3-pip py3-openssl py3-cryptography \
     ffmpeg-libs \
     ffmpeg \
     unrar \
