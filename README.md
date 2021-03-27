@@ -10,7 +10,7 @@ The container is lightweight and based on alpine Linux.
 
 SABnzbd development-releases are now requiring **Python 3**, so I updated the container.   
 
-Last build is from: **20/03/2021**
+Last build is from: **27/03/2021**
 
 Status from last build:
 -----
