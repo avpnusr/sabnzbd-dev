@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.12
 LABEL maintainer="avpnusr"
 ARG PAR2TAG=v0.8.1
 
